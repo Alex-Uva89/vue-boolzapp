@@ -10,7 +10,9 @@ body {
     font-family: arial;
     font-size: 16px;
 } 
-    
+ 
+/* ////////////BACKGROUND//////////////////// */
+
 .container-background{
     width: 100vw;
     height: 100vh;
@@ -24,6 +26,8 @@ body {
     background-color: rgb(0,150,136);
 }
 
+/* ///////////////CONTAINER MAX////////////// */
+
 #js-root{
     width: 1200px;
     height: 90vh;
@@ -35,14 +39,62 @@ body {
     display: flex;
 }
 
-.contact{
+/* ////////////////COLUMN CONTACT/////////////////// */
+
+.container-contacts{
     width: 30%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 }
 
-.chat{
+.top-nav,
+.head-chat{
+    height: 10%;
+    background-color:rgb(234,234,234);
+    border: .5px solid rgba(0,0,0,.1);
+}
+
+.bottom-nav{
+    height: 10%;
+    background-color: rgb(142,218,252);
+}
+
+/* ///////////////////BOX CHAT///////////////////////// */
+
+.container-chat{
     width: 70%;
     height: 100%;
     background-color: cadetblue;
 }
+
+.box-chat{
+    height: 80%;
+    background-image: url(../img/mine.jpg);
+    background-size: cover;
+}
+
+.container-input{
+    height: 10%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: .5px solid rgba(0,0,0,.3)
+}
+
+.input-text{
+    width: 90%;
+    height: 16px;
+    padding: 1.2rem;
+    border: .5px solid black;
+    border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+

@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
-html{
+/* per ora imposto una size e un font all'html successivamente modificherò per rendere piu attractive l'aspetto finale */
+TODO:
+body {
     font-family: arial;
     font-size: 16px;
-}
-
+} 
+    
 .container-background{
     width: 100vw;
     height: 100vh;

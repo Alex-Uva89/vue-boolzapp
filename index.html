@@ -18,6 +18,8 @@
         <!-- creo div decorativo -->
         <div id="js-root">
             <!-- il div creato è utilizzato come finestra di attivazione js e per sfruttare il position -->
+
+            <!-- SEZIONE LISTA DEI CONTATTI E MIO PROFILO -->
             <section class="container-contacts">
                 <div class="top-nav">
                     <section class="section-profile">
@@ -51,26 +53,51 @@
                 </div>
                 <div class="container-list-contacts">
                     <ul class="list-contacts">
-                        <li>
-                            <div>Gabri Spanu</div> 
-                        </li>
-                        <li>
-                            <div>Mauro Costantinescu</div> 
-                        </li>
-                        <li>
-                            <div>Henri Kapidani</div> 
-                        </li>
-                        <li>
-                            Chiara Passaro
+                        <li v-for="element in contacts">
+                            <img :src="'img/avatar_'+element.proPic+'.jpg'" alt="pic Gabri Spanu" class="pic-profile">
+                            <div>{{ element.name }}</div> 
                         </li>
                     </ul>
                 </div>
             </section>
+
+            <!-- SEZIONE CHAT ATTIVA -->
             <section class="container-chat">
-                <div class="head-chat"></div>
-                <div class="box-chat">
-                    <div class="widow-chat"></div>
+                <!-- INFO CONTATTO -->
+                <div class="head-chat">
+                    <div class="profile-active">
+                        <img src="img/avatar_8.jpg" alt="pic Henri Kapidani" class="pic-profile">
+                        <div class="info-contact">
+                            <div class="name">Henri Kapidani</div>
+                            <div class="date">Ultimo messaggio alle ore 12</div>
+                        </div>
+                    </div>
+
+                    <ul class="list-options">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-paperclip"></i>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </li>
+                    </ul>
                 </div>
+                <!-- FINESTRA DELLA CONVERSAZIONE -->
+                <div class="box-chat">
+                    <div  class="widow-chat">
+                        <div v-for="(message,index) in contacts[counter].message">
+                            <div class="my-msg">{{message.txt}}</div> 
+                            <div class="date-ms">{{message.hour}}</div>
+                            <div class="text-ms reply">{{message.txtReplay}}</div>
+                            <div class="date-ms">{{message.date}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
                     <div>:)</div>
                     <input type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
@@ -88,7 +115,7 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -99,8 +99,9 @@ body {
 
 .icon-mute{
     font-size: 1.4rem;
+    color: rgba(0,0,0,.5);
     background-color: rgb(242,251,255);
-    padding: .7rem .5rem;
+    padding: .5rem;
     border-radius: 50rem;
     cursor: pointer;
 }
@@ -116,6 +117,53 @@ body {
     cursor: pointer;
 }
 
+.container-search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-search input{
+    width: 80%;
+    text-indent: 10px;
+    padding: .2rem;
+    border: .5px solid rgba(0,0,0,.5);
+    border-radius: 1rem;
+}
+
+.container-search input::placeholder{
+    font-style: italic;
+}
+
+.container-search input::first-letter{
+    text-transform: uppercase;
+}
+
+/* /////////////// LISTA CONTATTI //////////////// */
+
+.list-contacts li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.info-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-preview{
+    font-size: .7rem;
+    padding: 5px;
+}
+
+
 
 /* ///////////////////BOX CHAT///////////////////////// */
 
@@ -130,6 +178,10 @@ body {
     background-image: url(../img/mine.jpg);
     background-size: cover;
     overflow-y: scroll;
+}
+
+.open-chat{
+    background-color: rgb(243, 206, 106);
 }
 
 /* ///////////// SCROOLBAR CHAT /////////////// */
@@ -199,8 +251,11 @@ body {
     align-self: flex-end;
 }
 
+/* //////////////// INPUT CHAT /////////////////// */
+
 .container-input{
     height: 10%;
+    color: rgba(0,0,0,.5);
     background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
@@ -220,15 +275,7 @@ body {
     font-style: italic;
 }
 
-/* /////////////// LISTA CONTATTI //////////////// */
 
-.list-contacts li{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-}
 
 
 

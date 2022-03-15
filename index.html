@@ -41,7 +41,9 @@
                     </section>
                 </div>
                 <div class="bottom-nav">
-                    <i class="fa-solid fa-bell-slash icon-mute"></i>
+                    <div class="icon-mute">   
+                        <i class="fa-solid fa-bell-slash"></i>
+                    </div> 
                     <div>
                         <div class="text-allert">
                             ricevi notifice di nuovi messaggi
@@ -51,11 +53,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="container-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
+
+                </div>
                 <div class="container-list-contacts">
                     <ul class="list-contacts">
-                        <li v-for="element in contacts">
-                            <img :src="'img/avatar_'+element.proPic+'.jpg'" alt="pic Gabri Spanu" class="pic-profile">
-                            <div>{{ element.name }}</div> 
+                        <li v-for="(element, index) in contacts" @click="openChat(index)" :class="counter === index ? 'open-chat' : ''">
+                            <img :src="'img/avatar_'+element.proPic+'.jpg'" :alt="'pic '+ element.name " class="pic-profile" >
+                            <div class="info-contact">
+                                <div>{{ element.name }}</div> 
+                                <p class="msg-preview">{{ element.message[element.message.length - 1].txtReply }}</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -65,11 +75,11 @@
             <section class="container-chat">
                 <!-- INFO CONTATTO -->
                 <div class="head-chat">
-                    <div class="profile-active">
-                        <img src="img/avatar_8.jpg" alt="pic Henri Kapidani" class="pic-profile">
+                    <div  class="profile-active">
+                        <img :src="'img/avatar_' + contacts[counter].proPic +'.jpg'" alt="pic Henri Kapidani" class="pic-profile">
                         <div class="info-contact">
-                            <div class="name">Henri Kapidani</div>
-                            <div class="date">Ultimo messaggio alle ore 12</div>
+                            <div class="name">{{contacts[counter].name}}</div>
+                            <!-- <div class="date">funzione ora</div> TODO: -->
                         </div>
                     </div>
 
@@ -94,8 +104,8 @@
                                 <div class="date-ms">{{message.hour}}</div>
                             </div>
                             <div class="reply">
-                                <div class="text-ms">{{message.txtReplay}}</div>
-                                <div class="date-ms">{{message.date}}</div>
+                                <div class="text-ms">{{message.txtReply}}</div>
+                                <div class="date-ms">{{message.hourReply}}</div>
                             </div>
 
                         </div>
@@ -103,9 +113,9 @@
 
                 <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
-                    <div>:)</div>
+                    <i class="fa-solid fa-face-grin-wide"></i>
                     <input type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
-                    <div>Micr</div>
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
             </section>
 

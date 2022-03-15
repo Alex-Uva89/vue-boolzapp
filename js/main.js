@@ -11,8 +11,9 @@ const app = new Vue({
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
-                        txt: 'ehi ciao dimmi!',
-                        txtReplay: 'Ciao, certamente!',
+                        hourReply: '15:45:47',
+                        txt: 'ehi ciao ho bisogno di aiuto!',
+                        txtReply: 'Ciao, certamente!',
                     
                     },
                 ]
@@ -23,15 +24,13 @@ const app = new Vue({
                 proPic: '7',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'aiutoooooo non mi riesce nulla',
+                        txtReply: 'Ajò Ale! che succede?',
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             {
@@ -40,15 +39,13 @@ const app = new Vue({
                 proPic: '6',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'Ciao Mauro, sto cercando di far apparire i messaggi con il v-for forse sto sbagliando qualcosa.',
+                        txtReply: '42!',
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             {
@@ -57,15 +54,13 @@ const app = new Vue({
                 proPic: '5',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'Amo, sto partendo da casa',
+                        txtReply: 'ok amo.',
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             {
@@ -74,15 +69,13 @@ const app = new Vue({
                 proPic: '2',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'ciao Chiara, mi sto disperando!',
+                        txtReply: 'Ciao, ale! Ricordati che non devi lavorare troppo.',
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             {
@@ -91,15 +84,13 @@ const app = new Vue({
                 proPic: '3',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'Il termosifone perde di nuovo',
+                        txtReply: 'Chiudi tutto subito altrimenti ci arriva una stangata di gas',
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             {
@@ -108,21 +99,22 @@ const app = new Vue({
                 proPic: '4',
                 message: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        txt: '',
-                        status: 'sent',
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        hourReply: '15:45:47',
+                        txt: 'Tresor, sabato ci sei?',
+                        txtReply: "Si tesoro, mi sono già messo d'accordo con luca",
+                    
                     },
-                    {
-                        date: '10/01/2020 16:15:22',
-                        txt: 'Ciao, certamente!',
-                        status: 'received'
-                    }
                 ]
             },
             
         ]
     },
     methods: {
+        openChat(index){
+           this.counter = index; 
+        },
     }
   
 })

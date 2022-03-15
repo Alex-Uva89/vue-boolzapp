@@ -50,13 +50,35 @@ body {
 .top-nav,
 .head-chat{
     height: 10%;
+    padding: 10px;
     background-color:rgb(234,234,234);
     border: .5px solid rgba(0,0,0,.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .bottom-nav{
     height: 10%;
     background-color: rgb(142,218,252);
+}
+
+.pic-profile{
+    width: 50px;
+    border-radius: 10rem;
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.section-profile{
+    display: flex;
+    align-items: center;
+}
+
+.list-options{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 /* ///////////////////BOX CHAT///////////////////////// */
@@ -69,8 +91,32 @@ body {
 
 .box-chat{
     height: 80%;
+    font-size: 5rem;
     background-image: url(../img/mine.jpg);
     background-size: cover;
+    overflow-y: scroll;
+}
+
+/* ///////////// SCROOLBAR CHAT /////////////// */
+/* So che l'utilizzo di -webkit è sconsigliato perché sperimentazione ma volevo provare un po ad usarle per capirne i limiti */
+
+.box-chat::-webkit-scrollbar {
+    width: 10px;
+}
+
+.box-chat::-webkit-scrollbar-thumb {
+    background: rgb(175, 174, 174); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100); 
+}
+
+/* /////////////////////////////////////////// */
+
+.widow-chat{
+    height: 1000px;
 }
 
 .container-input{
@@ -86,9 +132,14 @@ body {
     width: 90%;
     height: 16px;
     padding: 1.2rem;
-    border: .5px solid black;
+    border: .5px solid rgba(0,0,0,.5);
     border-radius: 1rem;
 }
+
+.input-text::placeholder{
+    font-style: italic;
+}
+
 
 
 

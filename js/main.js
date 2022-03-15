@@ -12,13 +12,9 @@ const app = new Vue({
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'ehi ciao dimmi!',
-                        status: 'sent',
-                    },
-                    {
-                        date: '10/01/2020 16:15:22',
                         txtReplay: 'Ciao, certamente!',
-                        status: 'received'
-                    }
+                    
+                    },
                 ]
             },
             {

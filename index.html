@@ -87,14 +87,18 @@
                 </div>
                 <!-- FINESTRA DELLA CONVERSAZIONE -->
                 <div class="box-chat">
-                    <div  class="widow-chat">
-                        <div v-for="(message,index) in contacts[counter].message">
-                            <div class="my-msg">{{message.txt}}</div> 
-                            <div class="date-ms">{{message.hour}}</div>
-                            <div class="text-ms reply">{{message.txtReplay}}</div>
-                            <div class="date-ms">{{message.date}}</div>
+                    
+                        <div v-for="(message,index) in contacts[counter].message"   class="widow-chat">
+                            <div class="my-msg">
+                                <div class="text-ms">{{message.txt}}</div> 
+                                <div class="date-ms">{{message.hour}}</div>
+                            </div>
+                            <div class="reply">
+                                <div class="text-ms">{{message.txtReplay}}</div>
+                                <div class="date-ms">{{message.date}}</div>
+                            </div>
+
                         </div>
-                    </div>
                 </div>
 
                 <!-- COMPILATORE MESSAGGIO -->

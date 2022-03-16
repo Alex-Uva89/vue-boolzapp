@@ -1,7 +1,15 @@
+
 const app = new Vue({
     el:'#js-root',
     data:{
         counter: 0,
+        newTxt:'',
+        icons: [
+            {
+                microphone: '<i class="fa-solid fa-4"></i>',
+                sending: '<i class="fa-solid fa-4"></i>',
+            }
+        ],
         contacts: [
             {
                 name: 'Henri Kapidani',
@@ -139,9 +147,26 @@ const app = new Vue({
         openChat(index){
            this.counter = index; 
         },
-        lastConnection(){
-            luxon.DateTime.fromISO(this.lastConnect);
+        hourFormat(){
+            luxon(this.lastConnect, "dd-MM-yyyy")
         },
+        addTxt(){
+            if(this.newTxt.trim() != ''){
+                const newObjContact = { txt:this.newTxt, txtReply:'Eh certo!' };
+                this.contacts.unshift(newObjContact).strim;
+                this.newTodo = '';
+            }
+        },
+        changeIcons(){
+            if (this.newTxt != '') {
+                icon = this.microphone;
+            } else {
+                icon = this.sending;
+            }
+            return icon;
+        },
+    
     }
-  
+    
+
 })

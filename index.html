@@ -79,12 +79,12 @@
                         <img :src="'img/avatar_' + contacts[counter].proPic +'.jpg'" alt="pic Henri Kapidani" class="pic-profile">
                         <div class="info-contact">
                             <div class="name">{{contacts[counter].name}}</div>
-                            <div class="date">{{ lastConnection() }}</div>
+                            <div class="date">{{ lastConnection(contacts[counter].lastConnect) }}</div>
                         </div>
                     </div>
 
                     <ul class="list-options">
-                        <li>
+                        <li>    
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </li>
                         <li>

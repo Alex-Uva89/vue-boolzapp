@@ -10,8 +10,9 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
 ● Click sul contatto mostra la conversazione del contatto cliccato
 ////////////////FATTO/////////////////////
 
-MILESTONE 3
-Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante, il testo digitato viene letto e utilizzato per creare un nuovo todo, che quindi viene aggiunto alla lista dei todo esistenti.
+Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 
 Bonus:

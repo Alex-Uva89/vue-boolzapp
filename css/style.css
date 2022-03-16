@@ -235,8 +235,8 @@ body {
 }
 
 .my-msg{
-    min-width: fit-content;
-    max-width: 50%;
+    width: 50%;
+    max-width: 30%;
     padding: .8rem;
     margin: 20px 10px;
     align-self: flex-end;

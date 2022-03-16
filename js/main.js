@@ -147,8 +147,8 @@ const app = new Vue({
         openChat(index){
            this.counter = index; 
         },
-        hourFormat(dateH){
-            let time = luxon.DateTime.fromISO(dateH).toRelativeCalendar();
+        hourFormat(){
+            let time = luxon.DateTime.add(this.lastConnect).toRelativeCalendar();
             return time
         },
         addTxt(){
@@ -181,6 +181,7 @@ const app = new Vue({
         }
     
     }
+ 
     
 
 })

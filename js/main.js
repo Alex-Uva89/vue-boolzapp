@@ -6,8 +6,8 @@ const app = new Vue({
         newTxt:'',
         icons: [
             {
-                microphone: '<i class="fa-solid fa-4"></i>',
-                sending: '<i class="fa-solid fa-4"></i>',
+                preFixMicrophone: 'fa-solid',
+                microphone: 'fa-4',
             }
         ],
         contacts: [
@@ -147,24 +147,38 @@ const app = new Vue({
         openChat(index){
            this.counter = index; 
         },
-        hourFormat(){
-            luxon(this.lastConnect, "dd-MM-yyyy")
+        hourFormat(dateH){
+            let time = luxon.DateTime.fromISO(dateH).toRelativeCalendar();
+            return time
         },
         addTxt(){
             if(this.newTxt.trim() != ''){
-                const newObjContact = { txt:this.newTxt, txtReply:'Eh certo!' };
-                this.contacts.unshift(newObjContact).strim;
-                this.newTodo = '';
+                const h = new Date();
+                const m = new Date();
+                const s = new Date();
+                let hr = h.getHours();
+                let min = m.getMinutes();
+                let sec = s.getSeconds();
+                let eleContainer = document.querySelector('.widow-chat')
+                let spaceReply = document.createElement('div');
+                spaceReply.classList.add('my-msg');
+                spaceReply.innerHTML = '<div class="text-ms">'+this.newTxt+'</div> <div class="date-ms">'+hr+'.'+min+'.'+sec+'</div>';
+                eleContainer.append(spaceReply);
+                newTxt = ' ';
+                const auto = setTimeout(this.autoReply, 2000);
             }
         },
-        changeIcons(){
-            if (this.newTxt != '') {
-                icon = this.microphone;
-            } else {
-                icon = this.sending;
-            }
-            return icon;
-        },
+        autoReply(){
+                const m = new Date();
+                const s = new Date();
+                let min = m.getMinutes();
+                let sec = s.getSeconds();
+                let eleContainer = document.querySelector('.widow-chat')
+                let spaceReply = document.createElement('div');
+                spaceReply.classList.add('reply');
+                spaceReply.innerHTML = '<div class="text-ms">eh certo! cit. Pamela Prati</div> <div class="date-ms">'+min+'.'+sec+'</div>';
+                eleContainer.append(spaceReply);
+        }
     
     }
     

@@ -79,7 +79,7 @@
                         <img :src="'img/avatar_' + users[activeChat].proPic +'.jpg'" alt="'pic ' users[activeChat].name" class="pic-profile">
                         <div class="info-contact">
                             <div class="name">{{users[activeChat].name}}</div>
-                            <div class="date">{{ hourFormat(users[activeChat].lastConnect ) }}</div>  
+                            <div class="date">Ultimo accesso :{{ hourFormat(users[activeChat].lastConnect ) }}</div>  
                         </div>
                     </div>
 
@@ -113,7 +113,9 @@
                 </div>
                 <div class="container-input">
                     <i class="fa-solid fa-face-grin-wide"></i>
-                    <input v-model="users[activeChat].newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
+                    <input v-model="users[activeChat].newTxt" @keyup.enter="addTxt()" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
+
+
                     <i v-if="users[activeChat].newTxt == ''" class="fas fa-microphone"></i>
                     <i @click="addTxt()" v-else class="fa-solid fa-circle-arrow-right"></i>
                 </div>

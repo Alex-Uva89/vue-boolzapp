@@ -55,7 +55,6 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-
                         isVisible: false,
                     },
                     {
@@ -80,7 +79,6 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-
                         isVisible: false,
                     },
                     {
@@ -121,7 +119,6 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-
                         isVisible: false,
                     },
                     {
@@ -236,7 +233,6 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-
                         isVisible: false,
                     },
                     {
@@ -344,8 +340,8 @@ const app = new Vue({
                isVisible: false,
            };
            activeChat.message.push(sendMessage);
-           this.users[0].newTxt = '';
            this.autoReply(this.activeChat);
+           this.users[this.activeChat].newTxt = '';
         },
         autoReply(chatIndex){
             setTimeout(() => {

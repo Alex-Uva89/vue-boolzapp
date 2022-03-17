@@ -265,6 +265,31 @@ body {
     align-self: flex-end;
 }
 
+.msg-relative{
+    position: relative;
+}
+
+.menu-position{
+    position: absolute;
+    top:5px;
+    right: 20px;
+}
+
+.background-menu{
+    background-color: white;
+    padding: .5rem;
+}
+
+.item:hover{
+
+    color: white;
+    background-color: aqua;
+}
+
+.angle-icon{
+    text-align: end;
+}
+
 /* //////////////// INPUT CHAT /////////////////// */
 
 .container-input{

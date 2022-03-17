@@ -23,13 +23,14 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -317,11 +318,21 @@ const app = new Vue({
             this.users.forEach(element => {
                 if (element.name.toLowerCase().includes(this.researchTxt.toLowerCase())) {
                     element.visibility = true;
+                } else  if(this.researchTxt == ''){
+                    element.visibility = true;
                 } else {
                     element.visibility = false;
                 }
             });
-        }
+        },
+        visibleMenu(){
+            no = false
+            ok = false;
+            return ok;
+        },
+        deleteMessage(element, index) {
+            this.users[element].splice(index)
+        },
 
     }
 }) 

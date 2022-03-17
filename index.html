@@ -55,7 +55,7 @@
                 </div>
                 <div class="container-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input v-model="researchTxt" @keyup.enter="searchResult()" type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
+                    <input v-model="researchTxt" @keyup="searchResult()" type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
 
                 </div>
                 <div class="container-list-contacts">
@@ -64,7 +64,7 @@
                             <img :src="'img/avatar_'+ element.proPic +'.jpg'" :alt="'pic '+ element.name " class="pic-profile" >
                             <div class="info-contact">
                                 <div>{{ element.name }}</div> 
-                                <!-- <p class="msg-preview">{{ element.message[element.message.length - 1].txt }}</p> -->
+                                <p class="msg-preview">{{ element.message[element.message.length - 1].txt }}</p>
                             </div>
                         </li>
                     </ul>

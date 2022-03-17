@@ -271,13 +271,18 @@ body {
 
 .menu-position{
     position: absolute;
-    top:5px;
-    right: 20px;
+    bottom:5px;
+    left: 10px;
 }
 
 .background-menu{
+    width:max-content;
     background-color: white;
     padding: .5rem;
+    position: absolute;
+    bottom:-270%;
+    left: 0px;
+    border: .1px solid rgba(0, 0, 0, 0.2);
 }
 
 .item:hover{

@@ -47,6 +47,7 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
+                        isVisible: false,
                     
                     },
                     {
@@ -54,13 +55,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: '...',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -77,13 +80,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                     {
@@ -91,13 +96,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -114,6 +121,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
+
+                        isVisible: false,
+                    },
+                    {
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        txt: 'Ciao, certamente!',
+                        isSend: false,
+                        isVisible: false,
                     
                     },
                     {
@@ -121,6 +137,7 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                     {
@@ -128,13 +145,7 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
-                    
-                    },
-                    {
-                        date: '10/01/2020', 
-                        hour: '15:30:55',
-                        txt: 'Ciao, certamente!',
-                        isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -151,20 +162,23 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -181,6 +195,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
+
+                        isVisible: false,
+                    },
+                    {
+                        date: '10/01/2020', 
+                        hour: '15:30:55',
+                        txt: 'Ciao, certamente!',
+                        isSend: false,
+                        isVisible: false,
                     
                     },
                     {
@@ -188,6 +211,7 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                     {
@@ -195,13 +219,7 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
-                    
-                    },
-                    {
-                        date: '10/01/2020', 
-                        hour: '15:30:55',
-                        txt: 'Ciao, certamente!',
-                        isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -218,13 +236,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -241,13 +261,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -264,13 +286,15 @@ const app = new Vue({
                         hour: '15:30:55',
                         txt: 'ehi ciao ho bisogno di aiuto!',
                         isSend: true,
-                    
+
+                        isVisible: false,
                     },
                     {
                         date: '10/01/2020', 
                         hour: '15:30:55',
                         txt: 'Ciao, certamente!',
                         isSend: false,
+                        isVisible: false,
                     
                     },
                 ]
@@ -316,6 +340,7 @@ const app = new Vue({
                hour: luxon.DateTime.now().toISO().split('T')[1],
                txt: activeChat.newTxt,
                isSend: true,
+               isVisible: false,
            };
            activeChat.message.push(sendMessage);
            this.users[0].newTxt = '';
@@ -329,6 +354,7 @@ const app = new Vue({
                     hour: luxon.DateTime.now().toISO().split('T')[1],
                     txt: this.generateRandomReply(),
                     isSend: false,
+                    isVisible: false,
                 }; 
                 this.users[chatIndex].message.push(reply);   
             }, 2000);

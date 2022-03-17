@@ -55,7 +55,7 @@
                 </div>
                 <div class="container-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
+                    <input v-model="researchTxt" @keyup.enter="searchResult()" type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
 
                 </div>
                 <div class="container-list-contacts">
@@ -108,7 +108,7 @@
                 <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
                     <i class="fa-solid fa-face-grin-wide"></i>
-                    <input v-model="newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
+                    <input v-model="users[0].newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
                     <!-- <button  @click="addTxt()" >{{ changeIcons() }}</button> -->
                 </div>
             </section>

@@ -60,11 +60,11 @@
                 </div>
                 <div class="container-list-contacts">
                     <ul class="list-contacts">
-                        <li v-for="(element, index) in users"  v-show="element.visibility" @click="openChat(index)" :class="activeChat === index ? 'open-chat' : ''">
+                        <li v-for="(element, index) in users"  v-show="element.visibility" @click="openChat(index)" :class="activeChat === index ? 'open-chat' : ''" >
                             <img :src="'img/avatar_'+ element.proPic +'.jpg'" :alt="'pic '+ element.name " class="pic-profile" >
                             <div class="info-contact">
                                 <div>{{ element.name }}</div> 
-                                <p class="msg-preview">{{ element.message[element.message.length - 1].txt }}</p>
+                                <div v-if="element.message.length > 0" class="msg-preview">{{ element.message[element.message.length - 1].txt }}</div>
                             </div>
                         </li>
                     </ul>

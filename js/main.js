@@ -319,7 +319,8 @@ const app = new Vue({
             'Ti amo',
             'Sposami',
             'Ci andiamo a prendere er succo de bolle????'
-        ]
+        ],
+
     },
     methods: {
         addPropic(){

@@ -114,8 +114,10 @@
                 <div class="container-input">
                     <i class="fa-solid fa-face-grin-wide"></i>
                     <input v-model="users[activeChat].newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
-                    <!-- <button  @click="addTxt()" >{{ changeIcons() }}</button> -->
+                    <i v-if="users[activeChat].newTxt == ''" class="fas fa-microphone"></i>
+                    <i @click="addTxt()" v-else class="fa-solid fa-circle-arrow-right"></i>
                 </div>
+
 
                 <!-- COMPILATORE MESSAGGIO -->
             </section>

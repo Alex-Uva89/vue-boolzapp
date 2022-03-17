@@ -318,6 +318,11 @@ body {
     font-style: italic;
 }
 
+.container-input i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 
 
 

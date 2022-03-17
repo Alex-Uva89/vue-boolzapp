@@ -276,6 +276,25 @@ const app = new Vue({
                 ]
             },
             
+        ],
+        phrasesRandom:[
+            'bellaaaaaaaaaa',
+            'AvadaKedavra',
+            'Si dice Leviosa non Leviosà',
+            'Potter! Ah no scusa vi somigliate',
+            'si dimmi',
+            "I particolari sulla tua incompetenza non m'interessano",
+            'la risposta a tutte le domande è... 42!',
+            "che differenza c'è tra un corvo e una scrivania?",
+            'Hai paura Potter?',
+            'Esiste una difficoltà negli esseri umani, una di quelle sei tu',
+            'Una volta ho mangiato un canguro',
+            'HakunaMatata',
+            'Chi va con lo zoppo? ... va con lo zoppo ovviamente.',
+            'ti sto aspettando',
+            'Ti amo',
+            'Sposami',
+            'Ci andiamo a prendere er succo de bolle????'
         ]
     },
     methods: {
@@ -308,7 +327,7 @@ const app = new Vue({
 
                     date: luxon.DateTime.now().toISO().split('.')[0],
                     hour: luxon.DateTime.now().toISO().split('T')[1],
-                    txt: 'messaggio di prova',
+                    txt: this.generateRandomReply(),
                     isSend: false,
                 }; 
                 this.users[chatIndex].message.push(reply);   
@@ -325,15 +344,13 @@ const app = new Vue({
                 }
             });
         },
-        visibleMenu(){
-            no = false
-            ok = false;
-            return ok;
+        deleteMessage(element) {
+           
         },
-        deleteMessage(element, index) {
-            this.users[element].splice(index)
-        },
-
+        generateRandomReply(){
+            let random = this.phrasesRandom[Math.floor(Math.random()*(16 - 0))];  
+            return random  
+        }
     }
 }) 
     

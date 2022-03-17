@@ -281,9 +281,8 @@ body {
 }
 
 .item:hover{
-
     color: white;
-    background-color: aqua;
+    background-color: rgb(213,249,186);
 }
 
 .angle-icon{

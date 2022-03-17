@@ -344,9 +344,9 @@ const app = new Vue({
                 }
             });
         },
-        deleteMessage(element) {
-           
-        },
+        deleteMessage(messageIndex) {
+            this.users[this.activeChat].message.splice(messageIndex, 1);
+          },
         generateRandomReply(){
             let random = this.phrasesRandom[Math.floor(Math.random()*(16 - 0))];  
             return random  

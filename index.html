@@ -97,19 +97,18 @@
                 </div>
                 <!-- FINESTRA DELLA CONVERSAZIONE -->
                 <div class="box-chat">
-                    
-                        <!-- <div v-for="(message,index) in contacts[counter].message"   class="widow-chat">
-                            <div class="my-msg">
-                                <div class="text-ms">{{message.txt}}</div> 
-                                <div class="date-ms">{{message.hour}}</div>
-                            </div>
-                        </div> -->
+                    <div class="widow-chat">
+                        <div v-for="(message,index) in users[activeChat].message" :class="message.isSend ? 'sent' : 'reply'">
+                            <div class="text-ms">{{message.txt}}</div> 
+                            <div class="date-ms">{{message.hour}}</div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
-                    <!-- <i class="fa-solid fa-face-grin-wide"></i>
-                    <input v-model="newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio"> -->
+                    <i class="fa-solid fa-face-grin-wide"></i>
+                    <input v-model="newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
                     <!-- <button  @click="addTxt()" >{{ changeIcons() }}</button> -->
                 </div>
             </section>

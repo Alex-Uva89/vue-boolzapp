@@ -23,8 +23,8 @@
             <section class="container-contacts">
                 <div class="top-nav">
                     <section class="section-profile">
-                        <img src="img/avatar_2.jpg" alt="My Pic" class="pic-profile">
-                        <div>Alessandro Uva</div>
+                        <img :src="'img/avatar_'+ addPropic() +'.jpg'" :alt=" mainUser.name +' Pic'" class="pic-profile">
+                        <div>{{mainUser[0].name}}</div>
                     </section>
                     <section class="section-options">
                         <ul class="list-options">
@@ -60,11 +60,11 @@
                 </div>
                 <div class="container-list-contacts">
                     <ul class="list-contacts">
-                        <li v-for="(element, index) in contacts" @click="openChat(index)" :class="counter === index ? 'open-chat' : ''">
-                            <img :src="'img/avatar_'+element.proPic+'.jpg'" :alt="'pic '+ element.name " class="pic-profile" >
+                        <li v-for="(element, index) in users" @click="openChat(index)" :class="activeChat === index ? 'open-chat' : ''">
+                            <img :src="'img/avatar_'+ element.proPic +'.jpg'" :alt="'pic '+ element.name " class="pic-profile" >
                             <div class="info-contact">
                                 <div>{{ element.name }}</div> 
-                                <p class="msg-preview">{{ element.message[element.message.length - 1].txtReply }}</p>
+                                <!-- <p class="msg-preview">{{ element.message[element.message.length - 1].txt }}</p> -->
                             </div>
                         </li>
                     </ul>
@@ -76,10 +76,10 @@
                 <!-- INFO CONTATTO -->
                 <div class="head-chat">
                     <div  class="profile-active">
-                        <img :src="'img/avatar_' + contacts[counter].proPic +'.jpg'" alt="pic Henri Kapidani" class="pic-profile">
+                        <img :src="'img/avatar_' + users[activeChat].proPic +'.jpg'" alt="'pic ' users[activeChat].name" class="pic-profile">
                         <div class="info-contact">
-                            <div class="name">{{contacts[counter].name}}</div>
-                            <div class="date">{{ hourFormat }}</div>  
+                            <div class="name">{{users[activeChat].name}}</div>
+                            <div class="date">{{ hourFormat(users[activeChat].lastConnect ) }}</div>  
                         </div>
                     </div>
 
@@ -98,23 +98,18 @@
                 <!-- FINESTRA DELLA CONVERSAZIONE -->
                 <div class="box-chat">
                     
-                        <div v-for="(message,index) in contacts[counter].message"   class="widow-chat">
+                        <!-- <div v-for="(message,index) in contacts[counter].message"   class="widow-chat">
                             <div class="my-msg">
                                 <div class="text-ms">{{message.txt}}</div> 
                                 <div class="date-ms">{{message.hour}}</div>
                             </div>
-                            <div class="reply">
-                                <div class="text-ms">{{message.txtReply}}</div>
-                                <div class="date-ms">{{message.hourReply}}</div>
-                            </div>
-
-                        </div>
+                        </div> -->
                 </div>
 
                 <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
-                    <i class="fa-solid fa-face-grin-wide"></i>
-                    <input v-model="newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
+                    <!-- <i class="fa-solid fa-face-grin-wide"></i>
+                    <input v-model="newTxt" @keyup.enter="addTxt" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio"> -->
                     <!-- <button  @click="addTxt()" >{{ changeIcons() }}</button> -->
                 </div>
             </section>
@@ -131,8 +126,8 @@
 
 
     
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@2/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

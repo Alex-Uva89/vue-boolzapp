@@ -5,6 +5,7 @@
 }
 
 .light{
+    --background-color-body: linear-gradient( to bottom, #009688 0%, #009688 15%, #d2dbdc 15%, #d2dbdc 100%);
     --background-primary: rgb(217,219,212);
     --white-pure: rgb(255, 255, 255);
     --background-turquois: rgb(0,150,136);
@@ -26,6 +27,7 @@
 
 .dark{
     --txt-color: rgb(255,255,255);
+    --background-color-body: linear-gradient(to bottom, #0a1014 100%, #0a1014 100%);
     --background-primary: rgb(10,16,20);
     --white-pure: rgb(17,27,33);
     --background-turquois: transparent;
@@ -53,20 +55,15 @@ body {
     font-family: arial;
     font-size: 16px;
 } 
- 
+
 /* ////////////BACKGROUND//////////////////// */
 .container-background{
     width: 100vw;
     height: 100vh;
-    background-color: var(--background-primary);
+    background-image: var(--background-color-body);
     position: relative;
 }
 
-.head-background{
-    width: 100%;
-    height: 10vh;
-    background-color: var(--background-turquois);
-}
 
 /* ///////////////CONTAINER MAX////////////// */
 

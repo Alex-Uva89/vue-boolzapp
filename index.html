@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp by Uva</title>
 
+    <!-- LINK FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
 
+    <!-- LINK LIBRERIE ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="light">
@@ -24,6 +31,7 @@
                         <img :src="'img/avatar_'+ addPropic() +'.jpg'" :alt=" mainUser.name +' Pic'" class="pic-profile">
                         <div>{{mainUser[0].name}}</div>
                     </section>
+            <!-- TASTI OPTION NON FUNZIONANTI -->
                     <section class="section-options">
                         <ul class="list-options">
                             <li>
@@ -37,6 +45,8 @@
                             </li>
                         </ul>
                     </section>
+
+            <!-- BANNER ALLERT -->
                 </div>
                 <div class="bottom-nav">
                     <div class="icon-mute">   
@@ -54,7 +64,7 @@
                 <div class="container-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input v-model="researchTxt" @keyup="searchResult()" type="text" name="search" id="search" placeholder="cerca o inizia una nuova chat">
-
+            <!-- LISTA CONTATTI -->
                 </div>
                 <div class="container-list-contacts">
                     <ul class="list-contacts">
@@ -71,7 +81,7 @@
 
             <!-- SEZIONE CHAT ATTIVA -->
             <section class="container-chat">
-                <!-- INFO CONTATTO -->
+            <!-- INFO CONTATTO -->
                 <div class="head-chat">
                     <div  class="profile-active">
                         <img :src="'img/avatar_' + users[activeChat].proPic +'.jpg'" alt="'pic ' users[activeChat].name" class="pic-profile">
@@ -80,7 +90,7 @@
                             <div class="date">Ultimo accesso :{{ hourFormat(users[activeChat].lastConnect ) }}</div>  
                         </div>
                     </div>
-                    
+            <!--  MODALITà NOTTE   -->
                     <ul class="list-options">
                         <li>
                             <div class="mod-night">
@@ -115,6 +125,9 @@
                         </div>
                     </div>
                 </div>
+                
+                
+                <!-- COMPILATORE MESSAGGIO -->
                 <div class="container-input">
                     <i class="fa-solid fa-face-grin-wide"></i>
                     <input v-model="users[activeChat].newTxt" @keyup.enter="addTxt()" type="text" name="text" id="js-text" class="input-text" placeholder="inserisci messaggio">
@@ -125,7 +138,6 @@
                 </div>
 
 
-                <!-- COMPILATORE MESSAGGIO -->
             </section>
 
         </div>

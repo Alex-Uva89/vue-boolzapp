@@ -373,6 +373,23 @@ const app = new Vue({
         generateRandomReply(){
             let random = this.phrasesRandom[Math.floor(Math.random()*(16 - 0))];  
             return random  
+        },
+        darkMode(){
+            let isOn = document.getElementById('btn-mode');
+            if (isOn.innerHTML == '<i class="fa-solid fa-moon"></i>') {
+                isOn.innerHTML = '<i class="fa-solid fa-sun"></i>'
+                const darkContainer = document.querySelector('.light');
+                darkContainer.classList.remove('light');
+                darkContainer.classList.add('dark');
+            } else {
+                isOn.innerHTML = '<i class="fa-solid fa-moon"></i>'
+                const darkContainer = document.querySelector('.dark');
+                darkContainer.classList.remove('dark');
+                darkContainer.classList.add('light'); 
+            }
+
+
+
         }
     }
 }) 

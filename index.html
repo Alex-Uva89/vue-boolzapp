@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="light">
     <div class="container-background">
         <!-- utilizzo un container per lasciare libero il body -->
         <div class="head-background"></div> 
@@ -82,8 +82,14 @@
                             <div class="date">Ultimo accesso :{{ hourFormat(users[activeChat].lastConnect ) }}</div>  
                         </div>
                     </div>
-
+                    
                     <ul class="list-options">
+                        <li>
+                            <div class="mod-night">
+                                <span>modalità notte:</span>
+                                <button id="btn-mode" @click="darkMode()"><i class="fa-solid fa-moon"></i></button>
+                            </div>
+                        </li>
                         <li>    
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </li>
